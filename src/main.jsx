@@ -8,6 +8,8 @@ import {
 import Home from './components/Home/Home';
 import Countries from './components/Countries/Countries';
 import Contact from './components/Contact/Contact';
+import Country from './components/Countries/Country/Country';
+import CountryDetails from './components/Countries/CountryDetails/CountryDetails';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,7 +17,15 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<Countries></Countries>
+        element:<Countries></Countries>,
+      },
+      {
+        path:'/country',
+        element:<Country></Country>,
+      },
+      {
+        path:'/country/:id',
+        element:<CountryDetails></CountryDetails>,
       },
       {
         path:'/contact',
